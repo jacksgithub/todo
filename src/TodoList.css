@@ -1,0 +1,74 @@
+.TodoList {
+	margin: 20px auto;
+	padding: 10px 20px 20px;
+	text-align: left;
+}
+.TodoList h1,
+.TodoList h3 {
+	font-family: helvetica, arial, sans-serif;
+}
+.TodoList h1 {
+	margin: 20px 40px 0px;
+	padding-bottom: 0px;
+}
+.TodoList h3 {
+	border-bottom: 1px solid #ffb2c0;
+	padding-bottom: 20px;
+	margin: 0px 40px 30px;
+}
+.TodoList-todos {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+.TodoList-form-container {
+	margin-top: 30px;
+}
+
+@media (min-width: 800px) {
+	.TodoList {
+		width: 600px;
+		color: #fff;
+		background: rgb(233, 82, 82);
+		padding: 10px 0px 50px;
+		/* border: 1px solid pink; */
+		/* box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc; */
+		/* box-shadow: 0 -5px 3px -3px black, 0 5px 3px -3px black; */
+	}
+
+	/* List shadow 
+   * https://css-tricks.com/almanac/properties/b/box-shadow/
+   */
+	.TodoList {
+		position: relative;
+	}
+	.TodoList:before,
+	.TodoList:after {
+		z-index: -1;
+		position: absolute;
+		content: '';
+		bottom: 15px;
+		left: 10px;
+		width: 50%;
+		top: 80%;
+		max-width: 600px;
+		background: rgb(186, 157, 157);
+		-webkit-box-shadow: 0 15px 10px rgb(186, 157, 157);
+		-moz-box-shadow: 0 15px 10px rgb(186, 157, 157);
+		box-shadow: 0 15px 10px rgb(186, 157, 157);
+		-webkit-transform: rotate(-3deg);
+		-moz-transform: rotate(-3deg);
+		-o-transform: rotate(-3deg);
+		-ms-transform: rotate(-3deg);
+		transform: rotate(-3deg);
+	}
+	.TodoList:after {
+		-webkit-transform: rotate(3deg);
+		-moz-transform: rotate(3deg);
+		-o-transform: rotate(3deg);
+		-ms-transform: rotate(3deg);
+		transform: rotate(3deg);
+		right: 10px;
+		left: auto;
+	}
+}

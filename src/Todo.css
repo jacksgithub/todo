@@ -1,0 +1,91 @@
+.Todo {
+	padding: 10px 40px;
+	background-color: rgb(242, 112, 112);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: background-color 1s;
+	cursor: pointer;
+	margin-bottom: 1px;
+}
+.Todo.done {
+	transition: opacity 300ms ease-in-out;
+	transition-delay: 200ms;
+	opacity: 0.7;
+}
+.Todo.done .note {
+	/* text-decoration: line-through; */
+	opacity: 0.9;
+	transition: all 1s;
+	position: relative;
+}
+.Todo:hover {
+	background-color: rgb(243, 139, 139);
+}
+.Todo-btns {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.Todo-btns span {
+	cursor: pointer;
+	font-size: 12px;
+	margin-bottom: 7px;
+	padding: 7px 15px;
+	border: 1px solid #ffb2c0;
+	transition: 1s;
+}
+.Todo-btns span:hover {
+	font-weight: bold;
+	background-color: rgb(233, 82, 82);
+}
+.Todo-btns span {
+	text-decoration: none;
+}
+/* strikethrough animation on todo checked as done */
+.Todo.done .note:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: -0.5rem;
+	display: block;
+	width: 0%;
+	height: 1px;
+	background: #fff;
+	animation: strikeitem 0.3s ease-in 0s forwards;
+}
+
+@keyframes strikeitem {
+	to {
+		width: calc(100% + 1rem);
+	}
+}
+
+/* EditTodoForm */
+.EditTodoForm {
+	display: flex;
+	flex: 1;
+	margin-right: 30px;
+}
+
+.EditTodoForm input {
+	padding: 15px 10px;
+	border: 1px solid #ffb2c0;
+	width: 75%;
+}
+.EditTodoForm input:focus-visible {
+	outline: none;
+}
+.EditTodoForm button {
+	font-size: 12px;
+	padding: 15px 10px;
+	color: #fff;
+	border: 1px solid #ffb2c0;
+	background: transparent;
+	width: 24%;
+	cursor: pointer;
+	transition: background-color 1s;
+}
+.EditTodoForm button:hover {
+	background-color: rgb(242, 112, 112);
+}

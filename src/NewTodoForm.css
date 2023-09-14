@@ -1,0 +1,31 @@
+.NewTodoForm form {
+	display: flex;
+	justify-content: space-between;
+	padding: 0px 40px;
+}
+.NewTodoForm h4 {
+	margin: 0px 40px 10px;
+	/* border-top: 1px solid #ffb2c0; */
+	padding-top: 20px;
+}
+.NewTodoForm input {
+	padding: 15px 10px;
+	border: 1px solid #ffb2c0;
+	width: 75%;
+}
+.NewTodoForm input:focus-visible {
+	outline: none;
+}
+.NewTodoForm button {
+	font-size: 12px;
+	padding: 15px 10px;
+	color: #fff;
+	border: 1px solid #ffb2c0;
+	background: transparent;
+	width: 24%;
+	cursor: pointer;
+	transition: background-color 1s;
+}
+.NewTodoForm button:hover {
+	background-color: rgb(242, 112, 112);
+}
